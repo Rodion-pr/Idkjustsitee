@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎉 С Днём Рождения, Маша!</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<div id="particles"></div>
+
+<!-- Загрузочный экран -->
+<section id="loader">
+  <h1 id="loaderTitle">Добро пожаловать </h1>
+  <p id="typing"></p>
+  <div class="progress">
+    <div id="progressBar"></div>
+  </div>
+  <button id="startBtn">Начать проверку 🎀</button>
+</section>
+
+<!-- Основная карточка -->
+<section id="quiz" class="hidden">
+  <div class="card">
+    <div class="top">
+      <h2 id="question">Вопрос</h2>
+      <p id="counter">1 / 10</p>
+    </div>
+    <div id="answers"></div>
+    <div id="memeArea">
+      <img id="memeImage">
+      <p id="memeText"></p>
+    </div>
+  </div>
+</section>
+
+<!-- Финал -->
+<section id="finish" class="hidden">
+  <div class="finishCard">
+    <h1>🎉 С ДНЁМ РОЖДЕНИЯ 🎉</h1>
+    <h2>МАША </h2>
+    <p class="letter">
+      Поздравляю с постарением! 🎂<br><br>
+      Да-да, 18 — это уже серьёзный возраст,
+      можно смело жаловаться на спину и колени.<br><br>
+      Но зато теперь можно всё —
+      и делать вид, что ты взрослая и серьёзная,
+      хотя внутри всё та же весёлая Маша.<br><br>
+      Пусть этот год будет лучшим.<br><br>
+      С Днём Рождения! 
+    </p>
+    <button id="gift">🎁 Получить подарок</button>
+  </div>
+</section>
+
+<!-- Модальное окно -->
+<div id="giftModal" class="hidden">
+  <div class="giftBox">
+    <h2>Поздравление успешно разблокировано ❤️</h2>
+    <p>
+      Спасибо, что прошла проверку 😊<br><br>
+      Желаю счастья,
+      здоровья,
+      любви,
+      исполнения желаний
+      и чтобы этот год стал самым счастливым!
+    </p>
+    <button id="closeGift">Спасибо ❤️</button>
+  </div>
+</div>
+
+<audio id="clickSound" src="sounds/click.mp3"></audio>
+<audio id="successSound" src="sounds/success.mp3"></audio>
+<audio id="errorSound" src="sounds/error.mp3"></audio>
+<audio id="partySound" src="sounds/party.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
